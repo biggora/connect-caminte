@@ -16,10 +16,8 @@
  */
 
 var express = require('express'),
-        CaminteStore = require("./../lib/express-caminte")(express),
+        CaminteStore = require("./../lib/connect-caminte")(express),
         app = express();
-// sqlite3 mysql postgres mongodb
-
 
 
 app.use(express.cookieParser());

@@ -68,10 +68,10 @@ app.listen(3000);
   * `collection` Store collection to host sessions. 'session' by default.
   * `clear_interval` sec. to check expired sessions to remove on db
   * `db`
-  *  *  `host`
-  *  *  `port`
-  *  *  `username`
-  *  *  `password`
+     *  `host` 
+     *  `port`
+     *  `username`
+     *  `password`
 
 
 ## In the Wild
