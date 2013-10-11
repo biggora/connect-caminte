@@ -36,7 +36,7 @@ app.use(express.session({
     cookie: {
         maxAge: 60000 // 1 min as example
     },
-    secret: "Wild Express-MongoDB",
+    secret: "Wild CaminteJS",
     store: new CaminteStore({
                                 driver: 'sqlite3',
                                 collection: 'mysession',
@@ -68,10 +68,11 @@ app.listen(3000);
   * `collection` Store collection to host sessions. 'session' by default.
   * `clear_interval` sec. to check expired sessions to remove on db
   * `db`
-     *  `host` 
-     *  `port`
-     *  `username`
-     *  `password`
+     *  `host` server host
+     *  `port` server port
+     *  `database` database name (path to file for sqlite)
+     *  `username` database user
+     *  `password` database user password
 
 
 ## In the Wild
