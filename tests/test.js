@@ -33,8 +33,8 @@ app.use(express.session({
         db: {
         //    host: "127.0.0.1",
         //    port: "27017",
-        //    username: "hoteltv",
-        //    password: "NDcVLWCTxhfXa9CA",
+        //    username: "test",
+        //    password: "2NDcVLWCTxhfXa9CA",
             database: "./db/session.db"
         },
         clear_interval: 60, // 1 min
