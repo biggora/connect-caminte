@@ -1,7 +1,7 @@
 {
   "name": "connect-caminte",
   "description": "CrossDB session store for Connect and ExpressJS",
-  "version": "0.0.1-2",
+  "version": "0.0.1-3",
   "homepage": "https://github.com/biggora/connect-caminte/",
   "repository": {
     "type": "git",
@@ -9,16 +9,18 @@
   },
   "author": "Aleksej Gordejev <aleksej@gordejev.lv> (https://github.com/biggora/)",
   "keywords": [
-    "mongodb",
+    "caminte",
     "session",
     "store",
+    "connect",
     "express",
     "middleware",
+    "mongodb",
     "mysql",
     "sqlite",
     "mariadb",
     "postgres",
-    "caminte"
+    "couchdb"
   ],
   "main": "./index.js",
   "scripts": {

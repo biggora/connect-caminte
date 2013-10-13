@@ -9,11 +9,13 @@ connect-caminte is a Cross DataBase session store for [Connect](http://www.sench
 
 <table>
     <tr>
-      <td><img src="https://github.com/biggora/connect-caminte/raw/master/media/mongodb.png"/></td>
-      <td><img src="https://github.com/biggora/connect-caminte/raw/master/media/mysql.png"/></td>
-      <td><img src="https://github.com/biggora/connect-caminte/raw/master/media/postgresql.png"/></td>
-      <td><img src="https://github.com/biggora/connect-caminte/raw/master/media/sqlite.png"/></td>
-      <td><img src="https://github.com/biggora/connect-caminte/raw/master/media/mariadb.png"/></td>
+      <td><img width="100" src="https://github.com/biggora/connect-caminte/raw/master/media/memory.png"/></td>
+      <td><img width="100" src="https://github.com/biggora/connect-caminte/raw/master/media/mongodb.png"/></td>
+      <td><img width="100" src="https://github.com/biggora/connect-caminte/raw/master/media/mysql.png"/></td>
+      <td><img width="100" src="https://github.com/biggora/connect-caminte/raw/master/media/postgresql.png"/></td>
+      <td><img width="100" src="https://github.com/biggora/connect-caminte/raw/master/media/sqlite.png"/></td>
+      <td><img width="100" src="https://github.com/biggora/connect-caminte/raw/master/media/mariadb.png"/></td>
+      <td><img width="100" src="https://github.com/biggora/connect-caminte/raw/master/media/couchdb.png"/></td>    
     </tr>
 </table>
 

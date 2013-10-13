@@ -1,6 +1,6 @@
 /**
  *
- *  @revision    $Id: example.js 2013-10-08 04:54:16 Aleksey $
+ *  @revision    $Id: postgres_example.js 2013-10-08 04:54:16 Aleksey $
  *  @created     2013-10-08 04:54:16
  *  @category    Express Helpers
  *  @package     connect-caminte
@@ -17,25 +17,30 @@
 
 var express = require('express'),
         CaminteStore = require("./../lib/connect-caminte")(express),
-        app = express();
+        app = express(),
+        maxAge = 300000;
 
 
 app.use(express.cookieParser());
 app.use(express.session({
     cookie: {
-        maxAge: 180000, // 3 min
-        secret: "feb722690aeccfa92ca9ee6fdf06e55a",
+        maxAge: maxAge, // 3 min
+        secret: "feb722690aeccfa92ca9ee6fdf06e55a"
     },
-    secret: "Wild Express-CaminteJS",
+    secret: "Wild CaminteJS",
     store: new CaminteStore({
-        driver: 'sqlite3',
+        driver: 'postgres',
         collection: 'session',
         db: {
-            database: "./db/session.db"
+            host: "127.0.0.1",
+            port: "5432",
+            username: "test",
+            password: "test",
+            database: "test"
         },
         clear_interval: 60, // 1 min
         secret: "feb722690aeccfa92ca9ee6fdf06e55a",
-        maxAge: 300000 // 3 min
+        maxAge: maxAge 
     })
 }));
 
