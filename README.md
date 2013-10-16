@@ -20,7 +20,8 @@ connect-caminte is a Cross DataBase session store for [Connect](http://www.sench
     <tr>
       <td><img width="100" src="https://github.com/biggora/connect-caminte/raw/master/media/firebird.png"/></td>
       <td><img width="100" src="https://github.com/biggora/connect-caminte/raw/master/media/rethinkdb.png"/></td>
-      <td colspan="5"></td>
+      <td><img width="100" src="https://github.com/biggora/connect-caminte/raw/master/media/redis.png"/></td>      
+      <td colspan="4"></td>
     </tr>
 </table>
 
