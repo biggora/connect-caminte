@@ -1,6 +1,6 @@
 /**
  *
- *  @revision    $Id: redis_example.js 2013-10-08 04:54:16 Aleksey $
+ *  @revision    $Id: tingodb_example.js 2013-10-08 04:54:16 Aleksey $
  *  @created     2013-10-08 04:54:16
  *  @category    Express Helpers
  *  @package     connect-caminte
@@ -30,14 +30,10 @@ app.use(express.session({
     },
     secret: "Wild CaminteJS",
     store: new CaminteStore({
-        driver: 'redis',
+        driver: 'tingodb',
         collection: 'session',
         db: {
-            host: "127.0.0.1",
-            port: "6379",
-          //  username: "",
-          //  password: "",
-            database: "test"
+            database: "./db/test"
         },
         clear_interval: 10, // 1 min
         secret: secret,
