@@ -38,7 +38,7 @@
     "node": ">=0.8"
   },
   "dependencies": {
-      "caminte": "latest"
+      "caminte": ">= 0.0.10"
   },
   "devDependencies": {
       "nodeunit": ">= 0.6.4",
