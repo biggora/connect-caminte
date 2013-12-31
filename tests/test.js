@@ -38,7 +38,7 @@ exports['Create and store session '] = function(test) {
         test.equal(session.expireAfterSeconds, maxAge / 1000);
         test.ok(session.ip, 'localhost');
         test.ok(session.user, 'guest');
-        test.equal(session.logedIn, 0);
+        test.equal(session.loggedIn, 0);
         test.done();
     });
 };
