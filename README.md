@@ -144,3 +144,6 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 - Report issues on the [github issues](https://github.com/biggora/connect-caminte/issues) page.
 
 [![Analytics](https://ga-beacon.appspot.com/UA-22788134-5/connect-caminte/readme)](https://github.com/igrigorik/ga-beacon)
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/biggora/connect-caminte/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
