@@ -15,8 +15,8 @@
  *  TrinteJS homepage http://www.trintejs.com
  */
 
-var express = require('express');
-var CaminteStore = require("./../lib/connect-caminte")(express);
+var session = require('express-session');
+var CaminteStore = require("./../lib/connect-caminte")(session);
 var sid = 'uyv6r4djvbu7ubi8708uyuby' + new Date().getTime();
 var maxAge = 300000; // 3 min
 var store = new CaminteStore({
