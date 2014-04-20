@@ -1,7 +1,7 @@
 {
   "name": "connect-caminte",
   "description": "CrossDB session store for Connect and ExpressJS",
-  "version": "0.0.2-1",
+  "version": "0.0.3",
   "homepage": "https://github.com/biggora/connect-caminte/",
   "repository": {
     "type": "git",

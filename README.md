@@ -33,7 +33,7 @@ To install connect-caminte:
 
     $ npm install -g connect-caminte
 
-## Usage overview
+## Usage overview (for Express 3)
 
 ```js
 var express = require('express'),
@@ -42,6 +42,47 @@ app = express();
 
 app.use(express.cookieParser());
 app.use(express.session({
+    cookie: {
+        maxAge: 60000 // 1 min as example
+    },
+    secret: "Wild CaminteJS",
+    store: new CaminteStore({
+                                driver: 'sqlite3',
+                                collection: 'mysession',
+                                db: {
+                                     database: "./db/data.db"
+                                },
+                                maxAge: 300000, // 3 min
+                                clear_interval: 60 // 1 min
+                            })
+}));
+
+app.get('/', function(req, res){
+ var sess = req.session;
+      if (sess.views) {
+        res.send('<p>views: ' + sess.views + '</p>'
+         + '<p>expires in: ' + (sess.cookie.maxAge / 1000) + 's</p>');
+        sess.views++;
+      } else {
+        sess.views = 1;
+        res.send('welcome to the session demo. refresh!');
+      }
+});
+
+app.listen(3000);
+```
+
+## Usage overview (for Express 4)
+
+```js
+var express = require('express');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
+var CaminteStore = require('connect-caminte')(session);
+var app = express();
+
+app.use(cookieParser());
+app.use(session({
     cookie: {
         maxAge: 60000 // 1 min as example
     },
