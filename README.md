@@ -21,8 +21,9 @@ connect-caminte is a Cross DataBase session store for [Connect](http://www.sench
       <td><img width="100" src="https://github.com/biggora/connect-caminte/raw/master/media/couchdb.png"/></td>
       <td><img width="100" src="https://github.com/biggora/connect-caminte/raw/master/media/rethinkdb.png"/></td>
       <td><img width="100" src="https://github.com/biggora/connect-caminte/raw/master/media/redis.png"/></td>  
-      <td><img width="100" src="https://github.com/biggora/connect-caminte/raw/master/media/tingodb.png"/></td>    
-      <td colspan="3"></td>
+      <td><img width="100" src="https://github.com/biggora/connect-caminte/raw/master/media/tingodb.png"/></td> 
+      <td><img width="100" src="https://github.com/biggora/connect-caminte/raw/master/media/neo4j.png"/></td> 
+      <td colspan="2"></td>
     </tr>
 </table>
 
