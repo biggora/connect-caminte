@@ -1,6 +1,6 @@
 /**
  *
- *  @revision    $Id: mysql_example.js 2013-10-08 04:54:16 Aleksey $
+ *  @revision    $Id: riak_example.js 2013-10-08 04:54:16 Aleksey $
  *  @created     2013-10-08 04:54:16
  *  @category    Express Helpers
  *  @package     connect-caminte
@@ -29,21 +29,21 @@ app.use(cookieParser());
 app.use(expressSession({
     cookie: {
         maxAge: maxAge, // 3 min
-        secret: "feb722690aeccfa92ca9ee6fdf06e55a"
+        secret: secret
     },
     secret: "Wild CaminteJS",
     store: new sessionStore({
-        driver: 'mysql',
+        driver: 'riak',
         collection: 'session',
         db: {
             host: "127.0.0.1",
-            port: "3306",
-            username: "test",
-            password: "test",
+            port: "8098",
+          //  username: "",
+          //  password: "",
             database: "test"
         },
-        clear_interval: 60, // 1 min
-        secret: "feb722690aeccfa92ca9ee6fdf06e55a",
+        clear_interval: 10, // 1 min
+        secret: secret,
         maxAge: maxAge 
     })
 }));

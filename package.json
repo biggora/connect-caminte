@@ -1,7 +1,7 @@
 {
   "name": "connect-caminte",
   "description": "CrossDB session store for Connect and ExpressJS",
-  "version": "0.0.3-1",
+  "version": "0.0.3-2",
   "homepage": "https://github.com/biggora/connect-caminte/",
   "repository": {
     "type": "git",
@@ -23,7 +23,8 @@
     "couchdb",
     "rethinkdb",
     "redis",
-    "tingodb"
+    "tingodb",
+    "neo4j"
   ],
   "main": "./index.js",
   "scripts": {
@@ -42,6 +43,7 @@
   },
   "devDependencies": {
       "nodeunit": ">= 0.6.4",
-      "express-session":">= 1.0.0"
+      "express-session":">= 1.0.0",
+      "cookie-parser":">= 1.0.0"
   }
 }

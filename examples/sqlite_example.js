@@ -15,20 +15,24 @@
  *  TrinteJS homepage http://www.trintejs.com
  */
 
-var express = require('express'),
-        CaminteStore = require("./../lib/connect-caminte")(express),
-        app = express(),
-        maxAge = 300000;
+var express = require('express');
+var expressSession = require('express-session');
+var cookieParser = require('cookie-parser');
+var CaminteStore = require("./../lib/connect-caminte");
+var app = express();
+var secret = "feb722690aeccfa92ca9ee6fdf06e55a";
+var maxAge = 300000;
 
+var sessionStore = CaminteStore(expressSession);
 
-app.use(express.cookieParser());
-app.use(express.session({
+app.use(cookieParser());
+app.use(expressSession({
     cookie: {
         maxAge: maxAge, // 3 min
         secret: "feb722690aeccfa92ca9ee6fdf06e55a"
     },
     secret: "Wild CaminteJS",
-    store: new CaminteStore({
+    store: new sessionStore({
         driver: 'sqlite3',
         collection: 'session',
         db: {
