@@ -39,11 +39,28 @@
     "node": ">=0.8"
   },
   "dependencies": {
-      "caminte": ">= 0.1.0"
+    "caminte": ">= 0.1.0"
   },
   "devDependencies": {
-      "nodeunit": ">= 0.6.4",
-      "express-session":">= 1.0.0",
-      "cookie-parser":">= 1.0.0"
+    "nodeunit": ">= 0.6.4",
+    "express-session": ">= 1.0.0",
+    "cookie-parser": ">= 1.0.0",
+    "arango": "latest",
+    "caminte": "latest",
+    "cradle": "latest",
+    "generic-pool": "latest",
+    "moment": "latest",
+    "mongodb": "latest",
+    "mysql": "latest",
+    "nano": "latest",
+    "node-firebird": "latest",
+    "node-neo4j": "latest",
+    "pg": "latest",
+    "redis": "latest",
+    "rethinkdb": "latest",
+    "riak-js": "latest",
+    "sqlite3": "latest",
+    "tingodb": ">=0.4.1",
+    "underscore": "latest"
   }
 }
