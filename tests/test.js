@@ -4,7 +4,7 @@
  *  @created     2013-10-08 04:54:16
  *  @category    Express Helpers
  *  @package     connect-caminte
- *  @version     0.0.1
+ *  @version     0.0.4
  *  @copyright   Copyright (c) 2009-2013 - All rights reserved.
  *  @license     MIT License
  *  @author      Alexey Gordeyev IK <aleksej@gordejev.lv>
@@ -14,15 +14,32 @@
  *  App based on TrinteJS MVC framework
  *  TrinteJS homepage http://www.trintejs.com
  */
-
+var driver = process.env.CAMINTE_DRIVER || 'memory';
 var session = require('express-session');
-var CaminteStore = require("./../lib/connect-caminte")(session);
+var fs = require('fs');
+var database = require('./database');
+var caminte = require("./../lib/connect-caminte");
+var CaminteStore = caminte(session);
 var sid = 'uyv6r4djvbu7ubi8708uyuby' + new Date().getTime();
 var maxAge = 300000; // 3 min
+var db = database[driver];
+var dbDir = './db';
+
+/* create dir for sqlite */
+var dstat, tstat;
+try {
+    dstat = fs.statSync(dbDir);
+} catch(err) {}
+if(!dstat) { fs.mkdirSync(dbDir,'0755'); }
+try {
+    tstat = fs.statSync(dbDir + '/test');
+} catch(err) {}
+if(!tstat) { fs.mkdirSync(dbDir + '/test','0755'); }
+
 var store = new CaminteStore({
-    driver: 'memory',
+    driver: driver,
     collection: 'session',
-    db: {},
+    db: db,
     secret: "feb722690aeccfa92ca9ee6fdf06e55a",
     maxAge: maxAge
 });
