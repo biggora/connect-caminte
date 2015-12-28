@@ -7,7 +7,12 @@
     "type": "git",
     "url": "git://github.com/biggora/connect-caminte.git"
   },
-  "author": "Aleksej Gordejev <aleksej@gordejev.lv> (https://github.com/biggora/)",
+  "author": {
+    "name": "Aleksej Gordejev",
+    "email": "aleksej@gordejev.lv",
+    "url": "http://www.gordejev.lv"
+  },
+  "license": "MIT",
   "keywords": [
     "caminte",
     "session",
@@ -39,10 +44,15 @@
     "node": ">=0.8"
   },
   "dependencies": {
-    "caminte": ">= 0.1.0"
+    "caminte": ">= 0.1.5"
   },
   "devDependencies": {
-    "nodeunit": ">= 0.6.4",
+    "mocha": "latest",
+    "should": "latest",
+    "superagent": "latest",
+    "istanbul": "latest",
+    "jshint": "2.x",
+    "express": ">= 4.0.0",
     "express-session": ">= 1.0.0",
     "cookie-parser": ">= 1.0.0",
     "arango": "latest",
@@ -60,7 +70,7 @@
     "rethinkdb": "latest",
     "riak-js": "latest",
     "sqlite3": "latest",
-    "tingodb": ">=0.4.1",
+    "tingodb": "latest",
     "underscore": "latest"
   }
 }

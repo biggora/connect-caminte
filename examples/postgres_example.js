@@ -28,10 +28,12 @@ var sessionStore = CaminteStore(expressSession);
 app.use(cookieParser());
 app.use(expressSession({
     cookie: {
-        maxAge: maxAge, // 3 min
-        secret: "feb722690aeccfa92ca9ee6fdf06e55a"
+        maxAge: maxAge
     },
-    secret: "Wild CaminteJS",
+    key: 'caminte',
+    secret: secret,
+    saveUninitialized: true,
+    resave: true,
     store: new sessionStore({
         driver: 'postgres',
         collection: 'session',

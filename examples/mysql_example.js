@@ -18,21 +18,22 @@
 var express = require('express');
 var expressSession = require('express-session');
 var cookieParser = require('cookie-parser');
-var CaminteStore = require("./../lib/connect-caminte");
-var app = express();
+var CaminteStore = require("./../");
 var secret = "feb722690aeccfa92ca9ee6fdf06e55a";
 var maxAge = 300000;
+var SessionStore = CaminteStore(expressSession);
+var app = express();
 
-var sessionStore = CaminteStore(expressSession);
-
-app.use(cookieParser());
+app.use(cookieParser(secret));
 app.use(expressSession({
     cookie: {
-        maxAge: maxAge, // 3 min
-        secret: "feb722690aeccfa92ca9ee6fdf06e55a"
+        maxAge: maxAge
     },
-    secret: "Wild CaminteJS",
-    store: new sessionStore({
+    key: 'caminte',
+    secret: secret,
+    saveUninitialized: true,
+    resave: true,
+    store: new SessionStore({
         driver: 'mysql',
         collection: 'session',
         db: {
@@ -42,13 +43,13 @@ app.use(expressSession({
             password: "test",
             database: "test"
         },
-        clear_interval: 60, // 1 min
-        secret: "feb722690aeccfa92ca9ee6fdf06e55a",
-        maxAge: maxAge 
+        clear_interval: 60,
+        secret: secret,
+        maxAge: maxAge
     })
 }));
 
-app.get('/', function(req, res, next) {
+app.get('/', function (req, res, next) {
     var sess = req.session;
     if (sess.views) {
         res.send('<p>views: ' + sess.views + '</p>'

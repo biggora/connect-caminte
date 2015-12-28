@@ -7,7 +7,7 @@
  *
  *  docs: https://github.com/biggora/caminte/wiki/Connecting-to-DB#connecting
  **/
-var travis = process.env.TRAVIS;
+// var travis = process.env.TRAVIS;
 var gitlab = process.env.GITLAB_CI;
 
 module.exports.memory = {
@@ -61,8 +61,8 @@ module.exports.redis = {
     driver     : 'redis',
     host       : gitlab ? 'redis' : '127.0.0.1',
     port       : '6379',
-    username   : 'test',
-    password   : 'test',
+    username   : '',
+    password   : '',
     database   : 'test'
 };
 
@@ -89,9 +89,9 @@ module.exports.neo4j = {
     driver     : 'neo4j',
     host       : gitlab ? 'neo4j' : '127.0.0.1',
     port       : '7474',
-//    username   : 'neo4j',
-//    password   : 'neo4j',
-    database   : 'test'
+    database   : 'test',
+  //  username   : 'neo4j',
+  //  password   : 'test'
 };
 
 module.exports.arango = {

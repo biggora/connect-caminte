@@ -1,5 +1,4 @@
-/nbproject/
-/node_modules/
-/db/
-/.idea
+node_modules
+db
+.idea
 /npm-debug.log

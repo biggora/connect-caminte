@@ -1,7 +1,6 @@
 language: node_js
 
 node_js:
-  - 0.8
   - 0.10
   - 0.12
   - 4.0
@@ -12,6 +11,9 @@ services:
     - postgresql
     - redis-server
     - mongodb
+
+env:
+    - NEO4J_AUTH="none"
 
 before_script:
     - sudo apt-get install -y apt-transport-https
