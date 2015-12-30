@@ -55,7 +55,7 @@
     "express": ">= 4.0.0",
     "express-session": ">= 1.0.0",
     "cookie-parser": ">= 1.0.0",
-    "arango": "latest",
+    "arangojs": "latest",
     "caminte": "latest",
     "generic-pool": "latest",
     "moment": "latest",
