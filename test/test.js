@@ -61,16 +61,15 @@ describe(driver + ' - Session store:', function () {
             secret: "feb722690aeccfa92ca9ee6fdf06e55a",
             maxAge: maxAge
         }, function () {
-            done();
+            setTimeout(function () {
+                done();
+            }, 1000);
         });
     });
 
-
     after(function (done) {
-        // User.destroynpm installAll(done);
-        done();
+        store.clear(done);
     });
-
 
     it('Create and store session', function (done) {
         store.set(sid, {
@@ -120,6 +119,18 @@ describe(driver + ' - Session store:', function () {
             store.get(sid, function (err, session) {
                 should.equal(err, null);
                 should.equal(session, null);
+                done();
+            });
+        });
+    });
+
+    it('Clear all sessions', function (done) {
+        store.clear(function (err) {
+            should.equal(err, null);
+            store.length(function (err, count) {
+                should.equal(err, null);
+                should.equal(typeof count, 'number');
+                should.equal(count, 0);
                 done();
             });
         });
