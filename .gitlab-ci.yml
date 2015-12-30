@@ -1,0 +1,35 @@
+image: biggora/gitlab-zone
+services:
+  - mariadb
+  - mysql
+  - postgres
+  - redis
+  - mongo
+  - rethinkdb
+  - arangodb
+  - neo4j
+
+variables:
+  MYSQL_USER: "test"
+  MYSQL_PASSWORD: "test"
+  MYSQL_DATABASE: "test"
+  MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+  POSTGRES_USER: "test"
+  POSTGRES_PASSWORD: "test"
+  POSTGRES_DB: "test"
+
+before_script:
+    - cat /etc/hosts | grep 172
+
+stages:
+    - test
+
+all:
+  stage: test
+  script:
+      - npm install --save-dev
+      - make test
+  only:
+      - master
+  tags:
+      - node
