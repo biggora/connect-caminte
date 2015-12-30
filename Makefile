@@ -9,7 +9,7 @@ JSHINT = $(which jshint)
 check:
 	@jshint ./lib
 
-test: test-sqlite test-mysql test-redis test-mongo test-arango
+test: test-sqlite test-mysql test-redis test-mongo
 
 test-cov: clear
 	@CAMINTE_DRIVER=mariadb $(MOCHA_COV)
