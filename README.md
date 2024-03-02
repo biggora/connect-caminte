@@ -134,12 +134,6 @@ The following projects use connect-caminte.
 If you are using connect-caminte in a project, app, or module, get on the list below
 by getting in touch or submitting a pull request with changes to the README.
 
-### Startups & Apps
-
-- [TViMama](http://tvimama.com/)
-- [GorkaTV](https://gorkatv.com/)
-
-
 ### Recommend extensions
 
 - [Bootstrap Fancy File Plugin](http://biggora.github.io/bootstrap-fancyfile/)
